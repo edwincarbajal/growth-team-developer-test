@@ -1,0 +1,23 @@
+<div id="gem_info" class="row">
+  <div class="info-wrapper">
+    <p>
+      <%= link_to gem['project_uri'], target: "_blank" do %>
+        <%= gem['name'] %>
+      <% end %>
+
+      <%= image_tag 'star-gray', class: 'favorite', id: gem['name'] %>
+    </p>
+
+    <p class="text-uppercase"><strong>Information</strong></p>
+    <p class="text-justify text-muted"><%= gem['info'] %></p>
+
+    <p class="text-uppercase"><strong>Dependencies</strong></p>
+    <% unless has_dependencies?(gem) %>
+      <% gem['dependencies']['development'].each do |gem| %>
+        <%= render 'gems/dependencies', gem: gem['name'] %>
+      <% end %>
+    <% else %>
+      <p class="text-muted">None</p>
+    <% end %>
+  </div>
+</div>

@@ -23,6 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Added by Edwin: -----------
+gem 'pry'
+gem 'pry-byebug'
+# -------------------------------
+
 # Added by Teachable: -----------
 gem 'gems'
 gem 'better_errors'

@@ -1,0 +1,35 @@
+.side-wrapper {
+  background-image: url('map.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.logo {
+  background-image: url('teachable-logo.png');
+  position: absolute;
+  top: 45px;
+  height: 15px;
+  width: 89px;
+}
+
+.nested-col {
+  padding: 0 !important;
+  height: 100vh;
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  ul li a {
+    color: #fff;
+  }
+  ul li a:hover {
+    background-color: transparent !important;
+  }
+  .active {
+     background: rgba(255, 255, 255, 0.2);
+  }
+}

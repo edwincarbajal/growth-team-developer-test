@@ -1,0 +1,9 @@
+$('.search_input').removeClass('errors');
+$('.error-message').remove();
+$('.search_input').val('');
+$('#gem_info').remove();
+$('#search_area').append("<%=j render 'gems/info', gem: @gem %>");
+let gems = JSON.parse(localStorage.getItem("gems"));
+gems.forEach(gem => {
+  $(`#${gem}`).attr('src', 'assets/star-blue');
+});
