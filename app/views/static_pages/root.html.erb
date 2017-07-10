@@ -1,1 +1,19 @@
-Please build the search page here.
+<div id="search_area" class="col-sm-8 content-wrappers">
+  <div class="row">
+    <div class="search-wrapper">
+      <div class="title-wrapper">
+        <h1>Search Gems</h1>
+      </div>
+
+      <%=  form_tag({controller: 'static_pages', action: 'search'}, method: 'get', class: 'searchbox search_box_form', remote: true) do %>
+        <div role="search" class="search_input_wrapper">
+          <%= text_field_tag(:search, nil, placeholder: 'Search', autocomplete: 'off', required: true, class: 'search_input') %>
+
+          <%= button_tag(type: 'submit', class: 'search_submit') do %>
+            <%= content_tag(:span, nil, class: 'search-icon') %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
