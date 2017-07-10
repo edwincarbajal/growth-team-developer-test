@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FrontendTest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>FrontendTest</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="side-wrapper content-wrappers col-sm-4">
+          <div class="row">
+            <div class="nested-col col-sm-4 col-sm-offset-8">
+              <span class="logo"></span>
 
-<%= yield %>
-
-</body>
+              <div class="menu-wrapper">
+                <ul class="nav nav-menu">
+                  <li class="search-li"><a href="/">Search</a></li>
+                  <li class="favorites-li"><a href="/favorites">Favorites</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>
